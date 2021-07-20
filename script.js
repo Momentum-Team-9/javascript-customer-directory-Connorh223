@@ -6,9 +6,10 @@ const customerCard = document.createElement('div')
 
 customerCard.classList.add('customer')
 
-// const customerPic = document.createElement('img')
-// customerPic.src = customers[0].picture
-// outputDiv.appendChild.customerPic
+const picture = document.createElement('img')
+picture.src= customers[0].picture.large
+customerCard.appendChild(picture)
+outputDiv.appendChild.picture
 // name
 const firstName = document.createElement('h1')
 firstName.innerText = customers[0].name.first
@@ -34,6 +35,7 @@ outputDiv.appendChild(customerCard)
 // (fixed it)
 
 // NEW LINE 
+// city state zip
 const city = document.createElement('dl')
 city.innerText = customers[0].location.city
 // customerCard.appendChild(city)
@@ -44,12 +46,14 @@ const postcode = customers[0].location.postcode
 city.innerText += ', ' + state + ' ' + postcode
 customerCard.appendChild(city)
 outputDiv.appendChild(customerCard)
+
 // NEW LINE
 // "dob..."
 const date = document.createElement('p')
 date.innerText = customers[0].dob.date
 customerCard.appendChild(date)
 // NEW LINE - FIX THIS SHIT ^
+
 // "member since..."
 const registered = document.createElement('p')
 registered.innerText = customers[0].registered.date
