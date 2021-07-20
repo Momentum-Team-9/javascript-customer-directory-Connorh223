@@ -5,6 +5,10 @@ const outputDiv = document.getElementById('root')
 const customerCard = document.createElement('div')
 
 customerCard.classList.add('customer')
+
+// const customerPic = document.createElement('img')
+// customerPic.src = customers[0].picture
+// outputDiv.appendChild.customerPic
 // name
 const firstName = document.createElement('h1')
 firstName.innerText = customers[0].name.first
@@ -12,30 +16,34 @@ const lastName = customers[0].name.last
 firstName.innerText += ' ' + lastName
 customerCard.appendChild(firstName)
 outputDiv.appendChild(customerCard)
+
 // email
 const email = document.createElement('div')
 email.innerText = customers[0].email
 customerCard.appendChild(email)
+
 // address
 const streetNumber = document.createElement('dl')
 streetNumber.innerText = customers[0].location.street.number
+// customerCard.appendChild(streetNumber)
+const streetName = customers[0].location.street.name
+streetNumber.innerText += ' ' + streetName
 customerCard.appendChild(streetNumber)
-const streetName = document.createElement('dl')
-streetName.innerText = customers[0].location.street.name
-customerCard.appendChild(streetName)
+outputDiv.appendChild(customerCard)
 // NEED TO FIX FORMAT^^^
-// address.innerText = customers[0].location.street.name
-// outputDiv.appendChild(customerCard)
+// (fixed it)
+
 // NEW LINE 
 const city = document.createElement('dl')
 city.innerText = customers[0].location.city
+// customerCard.appendChild(city)
+const state = customers[0].location.state
+// city.innerText += ', ' + state
+// customerCard.appendChild(state)
+const postcode = customers[0].location.postcode
+city.innerText += ', ' + state + ' ' + postcode
 customerCard.appendChild(city)
-const state = document.createElement('dl')
-state.innerText = customers[0].location.state
-customerCard.appendChild(state)
-const postcode = document.createElement('dl')
-postcode.innerText = customers[0].location.postcode
-customerCard.appendChild(postcode)
+outputDiv.appendChild(customerCard)
 // NEW LINE
 // "dob..."
 const date = document.createElement('p')
