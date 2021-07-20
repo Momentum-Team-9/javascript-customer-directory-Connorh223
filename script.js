@@ -50,11 +50,11 @@ outputDiv.appendChild(customerCard)
 // NEW LINE
 // "dob..."
 const date = document.createElement('p')
-date.innerText = customers[0].dob.date
+date.innerText = "DOB; " + moment(customers[0].dob.date). format("MMM DD, YYYY")
 customerCard.appendChild(date)
-// NEW LINE - FIX THIS SHIT ^
+// NEW LINE 
 
 // "member since..."
 const registered = document.createElement('p')
-registered.innerText = customers[0].registered.date
+registered.innerText = "Member since " + moment(customers[0].registered.date). format("MMM DD, YYYY")
 customerCard.appendChild(registered)
